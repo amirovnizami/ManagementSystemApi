@@ -21,4 +21,10 @@ public class CustomerController(ISender sender) : Controller
     {
         return Ok(await _sender.Send(request));
     }
+
+    [HttpPut]
+    public async Task<IActionResult> Update([FromBody] UpdateCustomerRequest request)
+    {
+        return Ok(await _sender.Send(request));
+    }
 }

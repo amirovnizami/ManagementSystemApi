@@ -1,0 +1,29 @@
+[33mcommit 9a314ae9e18d3cdd3f30fa1a6dec2f1407908fc2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Nizami Amirov <amirovnizami395@gmail.com>
+Date:   Fri Feb 21 23:41:06 2025 +0400
+
+    first commit
+
+[33mcommit 0ce5286ee1621e014cf7d7dc6121d4b52337da23[m
+Author: Nizami Amirov <amirovnizami395@gmail.com>
+Date:   Fri Feb 21 23:38:54 2025 +0400
+
+    Fluent Validation and Rate Limit
+
+[33mcommit 8b72ba9282519140b135be5b0dbc87e708bca800[m
+Author: Nizami Amirov <amirovnizami395@gmail.com>
+Date:   Fri Feb 21 23:38:02 2025 +0400
+
+    Fluent Validation and Rate Limit
+
+[33mcommit 13254d218de6de1a62b56d2f87945a8ffdb4d29c[m
+Author: shirinov_n <shirinov_n@STHQ0126-01>
+Date:   Tue Feb 11 11:58:43 2025 +0400
+
+    Add project files.
+
+[33mcommit abadb4e8cf26418386a161fc69cac00d2bfe58d0[m
+Author: shirinov_n <shirinov_n@STHQ0126-01>
+Date:   Tue Feb 11 11:58:41 2025 +0400
+
+    Add .gitattributes and .gitignore.

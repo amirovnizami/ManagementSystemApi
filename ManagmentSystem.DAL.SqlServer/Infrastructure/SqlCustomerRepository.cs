@@ -22,6 +22,7 @@ public class SqlCustomerRepository : ICustomerRepository
     public void Update(Customer customer)
     {
         _context.Customers.Update(customer);
+        _context.SaveChanges();
     }
 
     public async Task<bool> Delete(int id, int deletedBy)
