@@ -23,5 +23,16 @@ public class UserController(IMediator mediator) : ControllerBase
         var request = new Delete.Command() {Id = id};
         return Ok(await _mediator.Send(request));
     }
- 
+
+    [HttpPost]
+    public async Task<IActionResult> Register([FromBody] Register.Command request)
+    {
+        return Ok(await _mediator.Send(request));
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Update([FromBody] Update.Command request)
+    {
+        return Ok(await _mediator.Send(request));
+    }
 }

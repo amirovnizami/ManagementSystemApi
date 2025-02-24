@@ -17,11 +17,12 @@ public class SqlUserRepository(AppDbContext context) : IUserRepository
         await  _context.Users.AddAsync(user);
     }
 
-    public void Update(User user)
+    public async void Update(User user)
     {
         user.UpdatedDate = DateTime.Now;
         user.UpdatedBy = 1;
         _context.Users.Update(user);
+        await _context.SaveChangesAsync();
     }
 
     public void Remove(int id)
