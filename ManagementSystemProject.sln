@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagmentSystem.Application", "ManagmentSystem.Application\ManagmentSystem.Application.csproj", "{376B4256-669B-439C-933A-2947C07CC2BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Application", "ManagementSystem.Application\ManagementSystem.Application.csproj", "{376B4256-669B-439C-933A-2947C07CC2BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagmentSystem.Common", "ManagmentSystem.Common\ManagmentSystem.Common.csproj", "{96743A30-CB56-4EFD-84E1-EBCB408D26F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Common", "ManagementSystem.Common\ManagementSystem.Common.csproj", "{96743A30-CB56-4EFD-84E1-EBCB408D26F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagmentSystem.DAL.SqlServer", "ManagmentSystem.DAL.SqlServer\ManagmentSystem.DAL.SqlServer.csproj", "{04373598-2E2C-4EBF-AB4B-FDEE9405CB11}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.DAL.SqlServer", "ManagementSystem.DAL.SqlServer\ManagementSystem.DAL.SqlServer.csproj", "{04373598-2E2C-4EBF-AB4B-FDEE9405CB11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagmentSystem.Domain", "ManagmentSystem.Domain\ManagmentSystem.Domain.csproj", "{B04711FC-8891-4C70-B61F-64A85671F3C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Domain", "ManagementSystem.Domain\ManagementSystem.Domain.csproj", "{B04711FC-8891-4C70-B61F-64A85671F3C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagmentSystem.Repository", "ManagmentSystem.Repository\ManagmentSystem.Repository.csproj", "{6A6582B9-88A1-47DF-BD2A-E49325D303FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Repository", "ManagementSystem.Repository\ManagementSystem.Repository.csproj", "{6A6582B9-88A1-47DF-BD2A-E49325D303FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagmentSystem.WebUI", "ManagmentSystem.WebUI\ManagmentSystem.WebUI.csproj", "{9D2CAA2B-5047-41E9-868D-6B6FB8C02573}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.WebUI", "ManagementSystem.WebUI\ManagementSystem.WebUI.csproj", "{9D2CAA2B-5047-41E9-868D-6B6FB8C02573}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
