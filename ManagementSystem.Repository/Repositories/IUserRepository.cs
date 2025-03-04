@@ -1,5 +1,4 @@
 using ManagementSystem.Domain.Entites;
-using ManagmentSystem.Domain.Entites;
 
 namespace ManagementSystem.Repository.Repositories;
 

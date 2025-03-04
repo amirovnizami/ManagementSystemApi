@@ -1,5 +1,6 @@
 using ManagementSystem.Application;
 using ManagementSystem.DAL.SqlServer;
+using ManagementSystem.WebUI.Security;
 using ManagmentSystem.WebUI.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,16 +10,17 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("MyCon");
-builder.Services.AddSqlServerServices(connectionString);
+builder.Services.AddSqlServerServices(connectionString!);
 builder.Services.AddApplicationServices();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.CustomSchemaIds(type => type.FullName);
-});
-builder.Services.AddSwaggerGen(c =>
-{
-    c.EnableAnnotations();
-});
+builder.Services.AddAuthenticationDependency(builder.Configuration);
+// builder.Services.AddSwaggerGen(c =>
+// {
+//     c.CustomSchemaIds(type => type.FullName);
+// });
+// builder.Services.AddSwaggerGen(c =>
+// {
+//     c.EnableAnnotations();
+// });
 
 
 

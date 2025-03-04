@@ -2,7 +2,6 @@ using ManagementSystem.DAL.SqlServer.Context;
 using ManagmentSystem.Common.Exceptions;
 using ManagementSystem.Domain.Entites;
 using ManagementSystem.Repository.Repositories;
-using ManagmentSystem.Domain.Entites;
 using Microsoft.EntityFrameworkCore;
 
 namespace ManagementSystem.DAL.SqlServer.Infrastructure;
@@ -16,6 +15,7 @@ public class SqlUserRepository(AppDbContext context) : IUserRepository
         user.CreatedDate = DateTime.Now;
         user.CreatedBy = 1;
         await  _context.Users.AddAsync(user);
+        await _context.SaveChangesAsync();
     }
 
     public async void Update(User user)
@@ -40,15 +40,14 @@ public class SqlUserRepository(AppDbContext context) : IUserRepository
         _context.Users.Update(currentUser);
         _context.SaveChanges();
     }
-
     public List<User> GetAll()
     {
         return _context.Users.Where(u=>u.IsDeleted == false).ToList();
     }
 
-    public Task<User> GetByIdAsync(int id)
+    public async Task<User> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        return (await _context.Users.FirstOrDefaultAsync(u => u.Id == id))!;
     }
 
     public async Task<User> GetByEmailAsync(string email)

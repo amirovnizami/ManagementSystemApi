@@ -1,19 +1,18 @@
 using AutoMapper;
 using FluentValidation;
 using ManagementSystem.Application.CQRS.Users.DTOs;
+using ManagementSystem.Domain.Entites;
 using ManagmentSystem.Common.Exceptions;
 using ManagmentSystem.Common.GlobalResponses.Generics;
 using ManagmentSystem.Common.Security;
-using ManagementSystem.Domain.Entites;
 using ManagementSystem.Repository.Common;
-using ManagmentSystem.Domain.Entites;
 using MediatR;
 
 namespace ManagementSystem.Application.CQRS.Users.Handlers.Commands;
 
 public class Register
 {
-    public record struct Command : IRequest<Result<RegisterDto>>
+    public record struct RegisterCommand : IRequest<Result<RegisterDto>>
     {
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -22,16 +21,15 @@ public class Register
         public string Password { get; set; }
     }
 
-    public sealed class Handler(IUnitOfWork unitOfWork, IMapper mapper, IValidator<Command> validator) : IRequestHandler<Command, Result<RegisterDto>>
+    public sealed class Handler(IUnitOfWork unitOfWork, IMapper mapper, IValidator<RegisterCommand> validator) : IRequestHandler<RegisterCommand, Result<RegisterDto>>
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IMapper _mapper = mapper;
-        private readonly IValidator<Command> _validator = validator;
+        private readonly IValidator<RegisterCommand> _validator = validator;
 
-        public async Task<Result<RegisterDto>> Handle(Command request, CancellationToken cancellationToken)
+        public async Task<Result<RegisterDto>> Handle(RegisterCommand request, CancellationToken cancellationToken)
         {
-            // var validationResult = await _validator.ValidateAsync(request, cancellationToken);
-            // if (!validationResult.IsValid) throw new ValidationException(validationResult.Errors);
+         
             
             var isExist = await _unitOfWork.UserRepository.GetByEmailAsync(request.Email);
             if (isExist != null) throw new BadRequestException("User already exists");

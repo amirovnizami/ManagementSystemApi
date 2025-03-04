@@ -1,9 +1,9 @@
 using AutoMapper;
 using ManagementSystem.Application.CQRS.Users.DTOs;
+using ManagementSystem.Domain.Entites;
 using ManagmentSystem.Common.Exceptions;
 using ManagmentSystem.Common.GlobalResponses.Generics;
 using ManagementSystem.Repository.Common;
-using ManagmentSystem.Domain.Entites;
 using MediatR;
 
 namespace ManagementSystem.Application.CQRS.Users.Handlers.Commands;

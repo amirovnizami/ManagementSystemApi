@@ -1,11 +1,11 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using ManagementSystem.Application.Services;
+using ManagementSystem.Domain.Entites;
 using ManagementSystem.Repository.Common;
 using ManagmentSystem.Common.Exceptions;
 using ManagmentSystem.Common.GlobalResponses.Generics;
 using ManagmentSystem.Common.Security;
-using ManagmentSystem.Domain.Entites;
 using MediatR;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;

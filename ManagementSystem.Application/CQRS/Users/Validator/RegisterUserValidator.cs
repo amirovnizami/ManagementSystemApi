@@ -3,7 +3,7 @@ using ManagementSystem.Application.CQRS.Users.Handlers.Commands;
 
 namespace ManagementSystem.Application.CQRS.Users.Validator;
 
-public class RegisterUserValidator : AbstractValidator<Register.Command>
+public class RegisterUserValidator : AbstractValidator<Register.RegisterCommand>
 {
     public RegisterUserValidator()
     {
@@ -22,8 +22,7 @@ public class RegisterUserValidator : AbstractValidator<Register.Command>
         RuleFor(x => x.Phone)
             .NotEmpty().WithMessage("Phone number cannot be empty, null, or whitespace")
             .Matches(@"^\+994(5[015]|7[07])\d{7}$")
-            .WithMessage("Mobile phone format is +994");
-
+            .WithMessage("Mobile phone format is +994 followed by a valid number");
         RuleFor(x => x.Password)
             .NotEmpty().WithMessage("Password cannot be empty")
             .MinimumLength(8).WithMessage("Password must be at least 8 characters long");
