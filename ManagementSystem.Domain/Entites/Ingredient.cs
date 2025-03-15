@@ -9,6 +9,6 @@ public class Ingredient:ProductBaseEntity
     public int FreeIngredientCount { get; set; }
     public List<int> DepartmentsId { get; set; }
 
-
+    public ICollection<ProductIngredient> Products { get; set; }
     public ICollection<Department> Departments { get; set; }
 }

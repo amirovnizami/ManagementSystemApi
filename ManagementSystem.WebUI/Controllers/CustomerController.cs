@@ -1,10 +1,9 @@
 using ManagementSystem.Application.CQRS.Customers.Commands.Request;
 using ManagementSystem.Application.CQRS.Customers.Queries.Request;
-using ManagementSystem.Domain.Entites;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ManagmentSystem.WebUI.Controllers;
+namespace ManagementSystem.WebUI.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 public class CustomerController(ISender sender) : Controller

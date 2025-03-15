@@ -13,6 +13,7 @@ public class SqlUnitOfWork(string connectionString, AppDbContext context) : IUni
     public SqlCategoryRepository _categoryRepository;
     public SqlCustomerRepository _customerRepository;
     public SqlUserRepository _userRepository;
+    public SqlCarRepository _carRepository;
 
 
     public ICategoryRepository CategoryRepository =>
@@ -21,6 +22,7 @@ public class SqlUnitOfWork(string connectionString, AppDbContext context) : IUni
 
     public ICustomerRepository CustomerRepository => _customerRepository ?? new SqlCustomerRepository(_context);
     public IUserRepository UserRepository => _userRepository ?? new SqlUserRepository(_context);
+    public ICarRepository CarRepository => _carRepository ?? new SqlCarRepository(_context);
     public Task<int> SaveChangesAsync()
     {
         throw new NotImplementedException();
